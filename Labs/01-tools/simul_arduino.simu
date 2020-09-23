@@ -1,0 +1,30 @@
+<circuit animate="0" type="simulide_0.4" speed="1000000" noLinAcc="5" reactStep="50">
+ 
+Probe-12: 
+<item itemtype="Probe" objectName="Probe-12" labelx="16" id="Probe-12" rotation="-45" PlotterCh="0" vflip="1" y="128" Threshold="2.5" valLabRot="45" labely="-16" Show_volt="true" valLabelx="16" labelrot="45" x="-456" valLabely="0" hflip="1" Show_id="false"/>
+ 
+Ground-8: 
+<item itemtype="Ground" labelx="-16" labelrot="0" y="192" valLabelx="0" valLabely="0" id="Ground-8" hflip="1" vflip="1" valLabRot="0" objectName="Ground-8" Show_id="false" x="-380" labely="8" rotation="0"/>
+ 
+Led-7: 
+<item itemtype="Led" objectName="Led-7" labelx="-16" id="Led-7" rotation="0" Resistance="0.59999999999999998" Color="0" MaxCurrent="0.029999999999999999" Grounded="false" vflip="1" y="144" Threshold="2.3999999999999999" valLabRot="0" labely="-24" valLabelx="0" labelrot="0" x="-404" valLabely="0" hflip="1" Show_id="false"/>
+ 
+Resistor-5: 
+<item itemtype="Resistor" Unit=" Ω" objectName="Resistor-5" labelx="-12" id="Resistor-5" Resistance="100" rotation="0" vflip="1" y="144" valLabRot="0" labely="-20" valLabelx="-16" Show_res="true" labelrot="0" x="-452" valLabely="6" hflip="1" Show_id="false"/>
+ 
+atmega328-3: 
+<item itemtype="AVR" objectName="atmega328-3" labelx="0" id="atmega328-3" Program="" rotation="0" vflip="1" Mhz="16" y="64" valLabRot="0" labely="-20" valLabelx="0" Auto_Load="false" labelrot="0" x="-512" eeprom="" valLabely="0" hflip="1" Init_gdb="false" Show_id="true" Logic_Symbol="false"/>
+ 
+Connector-9: 
+<item itemtype="Connector" objectName="Connector-9" labelx="-16" id="Connector-9" rotation="0" vflip="1" y="144" pointList="-436,144,-420,144" valLabRot="0" labely="-24" startpinid="Resistor-5-rPin" valLabelx="0" labelrot="0" x="-436" valLabely="0" hflip="1" enodeid="enode-9" Show_id="false" endpinid="Led-7-lPin"/>
+ 
+Connector-10: 
+<item itemtype="Connector" objectName="Connector-10" labelx="-16" id="Connector-10" rotation="0" vflip="1" y="144" pointList="-388,144,-380,144,-380,176" valLabRot="0" labely="-24" startpinid="Led-7-rPin" valLabelx="0" labelrot="0" x="-388" valLabely="0" hflip="1" enodeid="enode-10" Show_id="false" endpinid="Ground-8-Gnd"/>
+ 
+Connector-11: 
+<item itemtype="Connector" objectName="Connector-11" labelx="-16" id="Connector-11" rotation="0" vflip="1" y="144" pointList="-472,144,-468,144" valLabRot="0" labely="-24" startpinid="atmega328-3-PB5" valLabelx="0" labelrot="0" x="-472" valLabely="0" hflip="1" enodeid="enode-11" Show_id="false" endpinid="Resistor-5-lPin"/>
+ 
+PlotterWidget-2: 
+<item contextMenuPolicy="1" minimized="false" mouseTracking="false" x="0" toolTip="" baseSize="" sizePolicy="" objectName="PlotterWidget-2" childrenRegion="" palette="" minimumSize="" toolTipDuration="-1" maximumWidth="1000" minimumWidth="200" frameSize="" windowIcon="" accessibleName="" childrenRect="" MinVolt="-500" sizeHint="" updatesEnabled="true" acceptDrops="false" windowTitle="" enabled="true" visible="false" size="" pos="" font="Noto Sans,9,-1,5,50,0,0,0,0,0" y="0" sizeIncrement="" whatsThis="" frameGeometry="" windowOpacity="1" autoFillBackground="false" inputMethodHints="0" modal="false" statusTip="" maximumHeight="200" windowModality="0" height="200" maximized="false" isActiveWindow="true" minimumSizeHint="" accessibleDescription="" windowFilePath="" itemtype="Plotter" windowIconText="" locale="" normalGeometry="" maximumSize="" rect="" focusPolicy="0" cursor="" fullScreen="false" geometry="" layoutDirection="0" windowModified="false" MaxVolt="500" Tracks="1" width="200" minimumHeight="200" styleSheet="" Scale="1" focus="false"/>
+ 
+</circuit>
