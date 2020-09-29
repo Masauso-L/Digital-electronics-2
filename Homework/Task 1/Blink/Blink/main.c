@@ -50,7 +50,7 @@ int main(void)
     {
         //Sending "D" : 1001
 		PORTB |=(1<<LED_GREEN);                //The LED is set on to 1 (High) i.e first 1 in D
-        _delay_ms(SHORT_DELAY);                //There is delayed for few ms i.e 1000ms pause before the next bit is sent
+                _delay_ms(SHORT_DELAY);                //There is delayed for few ms i.e 1000ms pause before the next bit is sent
 		PORTB = PORTB & ~(1<<LED_GREEN);       //The LED is reset to 0 (Low) i.e first 0 in D
 		_delay_ms(SHORT_DELAY);
 		PORTB = PORTB & ~(1<<LED_GREEN);       // The LED is kept Low to send the Second 0 in D 
