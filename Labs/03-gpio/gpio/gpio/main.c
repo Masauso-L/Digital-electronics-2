@@ -56,10 +56,10 @@ int main(void)
         // Pause several milliseconds
         _delay_ms(BLINK_DELAY);
         if (!GPIO_read(&PIND, BTN))
-		{
-        GPIO_toggle(&PORTB, LED_GREEN);
-		GPIO_toggle(&PORTC, LED_RED);
-		}
+	{
+           GPIO_toggle(&PORTB, LED_GREEN);
+	   GPIO_toggle(&PORTC, LED_RED);
+	}
 		
     }
 
