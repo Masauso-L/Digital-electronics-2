@@ -17,6 +17,7 @@ Fill in the following table and enter the number of bits and numeric range for t
 | `int16_t`  | 16 | -32768...32767  | Signed 16-bit integer |
 | `float`    | 32 | -3.4e+38 ,..., 3.4e+38 | Single-precision floating-point |
 | `void`     | * | *  | Used for pointers |
+
 *The number of bits and the range for void varies with the system type 
 
 Any function in C contains a declaration (function prototype), a definition (block of code, body of the function); each declared function can be executed (called).
