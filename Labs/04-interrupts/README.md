@@ -4,7 +4,7 @@
 
 The purpose of the laboratory exercise is to understand the function of the interrupt, interrupt service routine, and the functionality of timer units. Another goal is to practice finding information in the MCU manual; specifically setting timer control registers
 
-![Multi-function shield](Images/arduino_uno_multi-shield.jpg)
+![Multi-function shield](images/arduino_uno_multi-shield.jpg)
 
 
 ## Preparation tasks (done before the lab at home)
@@ -12,7 +12,7 @@ The purpose of the laboratory exercise is to understand the function of the inte
 Consider an n-bit number that we increment based on the clock signal. If we reach its maximum value and try to increase it, the value will be reset. We call this state an overflow. The overflow time depends on the frequency of the clock signal, the number of bits, and on the prescaler value:
 
 &nbsp;
-![Timer overflow](Images/timer_overflow.png)
+![Timer overflow](images/timer_overflow.png)
 &nbsp;
 
 Calculate the overflow times for three Timer/Counter modules that contain ATmega328P if CPU clock frequency is 16&nbsp;MHz. Complete the following table for given prescaler values. Note that, Timer/Counter2 is able to set 7 prescaler values, including 32 and 128.
