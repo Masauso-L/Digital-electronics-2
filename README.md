@@ -22,7 +22,7 @@ Each exercise has a follow up homework to be submitted before the next lab. Home
 * [Task 1:Blink(Morse code)](Homework/Task-1)
 * [Task 2:Knight raider](Homework/Task-2)
 * [Task 3:GPIO control ](Homework/Task-3)
-* [Task 4:Blink(Morse code)](Homework/Task-4)
+* [Task 4:Interrupts](Homework/Task-4)
 ### Project
 * General instructions
 
