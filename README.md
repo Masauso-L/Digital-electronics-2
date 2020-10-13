@@ -8,8 +8,8 @@ The Class exercises are located in the folder labs
 
 * [Git version-control system, AVR tools](Labs/01-tools)
 * [Control of GPIO, LED, push button](Labs/02-leds)
-* User library for GPIO control
-* Interrupts, Timers
+* [User library for GPIO control](Labs/03-gpio)
+* [Interrupts, Timers](Labs/04-interrupts)
 * Display devices, 7-segment display
 * Display devices, LCD display
 * ADC, serial communication, UART
@@ -20,6 +20,9 @@ The Class exercises are located in the folder labs
 Each exercise has a follow up homework to be submitted before the next lab. Homework tasks are contained in the folder Homeworks
 
 * [Task 1:Blink(Morse code)](Homework/Task-1)
+* [Task 2:Knight raider](Homework/Task-2)
+* [Task 3:GPIO control ](Homework/Task-3)
+* [Task 4:Blink(Morse code)](Homework/Task-4)
 ### Project
 * General instructions
 
