@@ -16,21 +16,13 @@
 // Active-low digital values for snake lookup table.
 uint8_t segment_value[] = {
 	// abcdefgDP
-	0b11111111,    // Digit 0
-	0b01111111,    // Digit 1
-	0b10111111,    // Digit 2
-	0b11011111,    // Digit 3
-	0b11101111,    // Digit 4
-	0b11110111,    // Digit 5
-	0b11111011,
-	
-	0b01111111,
-	0b11111011,
-	0b11110111,
-	0b11101111,
-	
-	0b11110111,
-	0b11111011};   // Digit 6
+	0b11111111,    //  All segment off
+	0b01111111,    // Digital segment a
+	0b10111111,    // Digital segment b
+	0b11011111,    // Digital segment c
+	0b11101111,    // Digital segment d
+	0b11110111,    // Digital segment e
+	0b11111011};   // Digital segment f
 
 // Active-high position 0 to 3
 uint8_t segment_position[] = {
