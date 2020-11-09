@@ -4,20 +4,6 @@
  * Created: 23.09.2020 11:30:30
  * Author : student
  */ 
-
-//#include <avr/io.h>
-
-
-//int main(void)
-//{
-    /* Replace with your application code */
-  //  while (1) 
-  //  {
-  //  }
-//	return 0;
-//} 
-
-
 	
 /***********************************************************************
  * 
@@ -32,7 +18,7 @@
 
 /* Defines -----------------------------------------------------------*/
 #define LED_GREEN   PB5     // AVR pin where green LED is connected
-#define SHORT_DELAY 50      // Delay in milliseconds
+#define SHORT_DELAY 2000    // Delay in milliseconds
 #ifndef F_CPU
 #define F_CPU 16000000      // CPU frequency in Hz required for delay func
 #endif
