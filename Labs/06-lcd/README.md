@@ -37,11 +37,37 @@ Use schematic of the [LCD keypad shield](../../Docs/arduino_shield.pdf) and find
 
 What is the ASCII table? What are the values for uppercase letters `A` to `Z`, lowercase letters `a` to `z`, and numbers `0` to `9` in this table?
 
+ASCII table is a table of values for character encoding standard for electronic communication. ASCII code is used to represent text in computers and other devices.
 &nbsp;
 
-
-&nbsp;
-
+|**CHAR**|**DEC**|**HEX**|**CHAR**|**DEC**|**HEX**|**CHAR**|**DEC**|**HEX**|
+| :-: | :-: | :-: | :-: | :-: | :-:| :-: | :-: | :-: |
+|0 | 48 | 30 | A | 65 | 41 | a | 97  | 61 |
+|1 | 49 | 31 | B | 66 | 42 | b | 98  | 62 |
+|2 | 50 | 32 | C | 67 | 43 | c | 99  | 63 |
+|3 | 51 | 33 | D | 68 | 44 | d | 100 | 64 |
+|4 | 52 | 34 | E | 69 | 45 | e | 101 | 65 |
+|5 | 53 | 35 | F | 70 | 46 | f | 102 | 66 | 
+|6 | 54 | 36 | G | 71 | 47 | g | 103 | 67 |
+|7 | 55 | 37 | H | 72 | 48 | h | 104 | 68 |
+|8 | 56 | 38 | I | 73 | 49 | i | 105 | 69 |
+|9 | 57 | 39 | J | 74 | 4A | j | 106 | 6A |
+|..|....|....| K | 75 | 4B | k | 107 | 6B |
+|..|....|....| L | 76 | 4C | l | 108 | 6C |
+|..|....|....| M | 77 | 4D | m | 109 | 6D |
+|..|....|....| N | 78 | 4E | n | 110 | 6E |
+|..|....|....| O | 79 | 4F | o | 111 | 6F |
+|..|....|....| P | 80 | 50 | p | 112 | 70 |
+|..|....|....| Q | 81 | 51 | q | 113 | 71 |
+|..|....|....| R | 82 | 52 | r | 114 | 72 |
+|..|....|....| S | 83 | 53 | s | 115 | 73 |
+|..|....|....| T | 84 | 54 | t | 116 | 74 | 
+|..|....|....| U | 85 | 55 | u | 117 | 75 |
+|..|....|....| V | 86 | 56 | v | 118 | 76 |
+|..|....|....| W | 87 | 57 | w | 119 | 77 |
+|..|....|....| X | 88 | 58 | x | 120 | 78 |
+|..|....|....| Y | 89 | 59 | y | 121 | 79 |
+|..|....|....| Z | 90 | 5A | z | 122 | 7A |
 &nbsp;
 
 In the lab, we are using [LCD library for HD44780 based LCDs](http://www.peterfleury.epizy.com/avr-software.html) developed by Peter Fleury. Use online manual of LCD library and add the input parameters and description of the functions to the following table.
