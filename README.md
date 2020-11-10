@@ -10,7 +10,7 @@ The Class exercises are located in the folder labs
 * [Control of GPIO, LED, push button](Labs/02-leds)
 * [User library for GPIO control](Labs/03-gpio)
 * [Interrupts, Timers](Labs/04-interrupts)
-* [Display devices, 7-segment display](Labs/05-7segment)
+* [Display devices, 7-segment display](Labs/05-segment)
 * [Display devices, LCD display](Labs/06-lcd)
 * [ADC, serial communication, UART](Labs/07-uart)
 * Serial communication, I2C/TWI
