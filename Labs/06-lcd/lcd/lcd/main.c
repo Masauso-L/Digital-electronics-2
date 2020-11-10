@@ -64,8 +64,11 @@ int main(void)
     // Put string(s) at LCD display
     lcd_gotoxy(1, 0);
     lcd_puts("00:00.0");
+	
 	lcd_gotoxy(11, 1);
 	lcd_puts("DE2");
+	
+	
 
     // Configure 8-bit Timer/Counter2 for Stopwatch
     // Set prescaler and enable overflow interrupt every 16 ms
@@ -186,7 +189,7 @@ ISR(TIMER0_OVF_vect)
     static uint8_t position = 0;
     
 	number_of_overflows++;
-	if (number_of_overflows >=12)
+	if (number_of_overflows >=12)  // It takes approximately 12 cycles to fill 1 bar
 	{
 		number_of_overflows = 0;
 		symbol++;
@@ -194,7 +197,7 @@ ISR(TIMER0_OVF_vect)
 		{
 			symbol = 0;
 			position++;
-			if ((position > 7))
+			if ((position > 7))   // Resetting the progress bar when 7th bar is filled
 			{
 				position = 0;
 				lcd_gotoxy(1, 1);
