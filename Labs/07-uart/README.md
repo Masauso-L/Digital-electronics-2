@@ -46,7 +46,7 @@ Calculate the ADC values for these voltages according to the following equation 
    | Up     | 0.495 V | 101    | 101 |
    | Down   | 1.202 V |  246   | 245 |
    | Left   |  1.97 V |  403   | 402 |
-   | Select |  3.18 V |  650   | 650 |
+   | Select |  3.18 V |  651   | 650 |
    | none   |  5 V    |  1023  | 1022 |
 
 
