@@ -109,68 +109,85 @@ ISR(ADC_vect)
 	uint16_t value = 0;
 	char lcd_string[8];
 
-	value = ADC;                    // Copy ADC result to 16-bit variable
-	itoa(value, lcd_string, 10);    // Convert to string in decimal
-	lcd_gotoxy(8,0);
+	value = ADC;  // Copy ADC result to 16-bit variable
+	
+	// Convert to string in decimal
+	itoa(value, lcd_string, 10);    
+	lcd_gotoxy(7,0);
 	lcd_puts("     ");
-	lcd_gotoxy(8,0);
+	lcd_gotoxy(7,0);
 	lcd_puts(lcd_string);
 	
+	// Send data through UART
 	if (value < 700)
 	{
-		// Send data through UART
+		
 		uart_puts("ADC value in decimal: ");
 		uart_puts(lcd_string);
-		uart_puts("\r\n");
+		uart_puts("\r\n");   // \n means put cursor to next line, \r to the beginning of the current line
 	}
 	
-	itoa(value, lcd_string, 16);    // Convert to string in hex
+	// Convert to string in hex
+	itoa(value, lcd_string, 16);    
 	lcd_gotoxy(13,0);
 	lcd_puts("     ");
 	lcd_gotoxy(13,0);
 	lcd_puts(lcd_string);
 	
-	if(value >= 1016)
+	//Displaying the identity of the button pressed
+    if(value >= 1016)
 	{
-		lcd_gotoxy(8, 1);  //home work
+		lcd_gotoxy(7, 1);  
 		lcd_puts("      ");
-		lcd_gotoxy(8, 1);
+		lcd_gotoxy(7, 1);
 		lcd_puts("None");
 	}
 	else if(value == 0)
 	{
-		lcd_gotoxy(8, 1); 
+		lcd_gotoxy(7, 1); 
 		lcd_puts("     ");
-		lcd_gotoxy(8, 1);
+		lcd_gotoxy(7, 1);
 		lcd_puts("Right");
 	}
 	else if(value == 101)
 	{
-		lcd_gotoxy(8, 1);
+		lcd_gotoxy(7, 1);
 		lcd_puts("     ");
-		lcd_gotoxy(8, 1);
+		lcd_gotoxy(7, 1);
 		lcd_puts("Up");
 	}
 	else if(value == 245 )
 	{
-		lcd_gotoxy(8, 1);
+		lcd_gotoxy(7, 1);
 		lcd_puts("     ");
-		lcd_gotoxy(8, 1);
+		lcd_gotoxy(7, 1);
 		lcd_puts("Down");
 	}
 	else if(value == 402)
 	{
-		lcd_gotoxy(8, 1);
+		lcd_gotoxy(7, 1);
 		lcd_puts("     ");
-		lcd_gotoxy(8, 1);
+		lcd_gotoxy(7, 1);
 		lcd_puts("Left");
 	}
 	else if(value == 650)
 	{
-		lcd_gotoxy(8, 1);
+		lcd_gotoxy(7, 1);
 		lcd_puts("      ");
-		lcd_gotoxy(8, 1);
+		lcd_gotoxy(7, 1);
 		lcd_puts("Select");
 	}
 	
+	//Parity bit evaluation (odd parity)
+	if(value %2==0)
+	{
+		lcd_gotoxy(14,1);
+		lcd_putc('1');
+	}
+	else
+	{
+		lcd_gotoxy(14,1);
+		lcd_putc('0');
+	}
+
 }
