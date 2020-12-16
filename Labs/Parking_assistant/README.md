@@ -18,12 +18,12 @@ The aim of this project is to create an parking assistant aplication using sever
 
 In this project, the following hardware was used: Arduino uno (based on atmega328p), an Ultrasonic sensor HC-SR04 for distance measuring, a buzzer for sound warning, LEDS for indication, LCD (16x2), resistors and jumper wires. 
 
-![SimulIDE hardware implementation](images/circuit.png)
+![SimulIDE hardware implementation](Images/circuit.png)
 
 ## Code description
 
 
-![Application state diagram](images/Flow_Chart.jpeg)
+![Application state diagram](Images/Flow_Chart.jpeg)
 
 
 ### The source code is available in my github [reopsitory](https://github.com/Masauso-L/Digital-electronics-2/tree/master/Labs/project). 
