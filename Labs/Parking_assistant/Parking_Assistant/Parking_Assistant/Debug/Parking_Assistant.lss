@@ -19,15 +19,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   7 .debug_abbrev 00000bd2  00000000  00000000  00003bb8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000fd2  00000000  00000000  0000478a  2**0
+  8 .debug_line   00000fd3  00000000  00000000  0000478a  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  0000041c  00000000  00000000  0000575c  2**2
+  9 .debug_frame  0000041c  00000000  00000000  00005760  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000684  00000000  00000000  00005b78  2**0
+ 10 .debug_str    00000684  00000000  00000000  00005b7c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    000010bc  00000000  00000000  000061fc  2**0
+ 11 .debug_loc    000010bc  00000000  00000000  00006200  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000150  00000000  00000000  000072b8  2**0
+ 12 .debug_ranges 00000150  00000000  00000000  000072bc  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -474,6 +474,8 @@ int main(void)
      2c4:	00 00       	nop
 	
 	_delay_ms(50);
+	
+	// Ports and data register setup
 	GPIO_config_output(&DDRB, LED_GREEN);
      2c6:	64 e0       	ldi	r22, 0x04	; 4
      2c8:	84 e2       	ldi	r24, 0x24	; 36
@@ -551,7 +553,7 @@ int main(void)
      34c:	90 e0       	ldi	r25, 0x00	; 0
      34e:	0e 94 5f 00 	call	0xbe	; 0xbe <GPIO_config_input_pullup>
 	
-	
+	//setting up external interrupt
 	EIMSK |= ((1<<INT0) | (1<<INT1));
      352:	8d b3       	in	r24, 0x1d	; 29
      354:	83 60       	ori	r24, 0x03	; 3
@@ -564,7 +566,7 @@ int main(void)
      360:	80 83       	st	Z, r24
 	
 	
-    // Configure 16-bit Timer/Counter1 to start ADC conversion
+    // Configure 16-bit Timer/Counter1  
     // Enable interrupt and set the overflow prescaler to 262 ms
 	TIM1_overflow_262ms();
      362:	e1 e8       	ldi	r30, 0x81	; 129
@@ -1724,7 +1726,7 @@ ISR(TIMER2_OVF_vect)
      bbe:	22 23       	and	r18, r18
      bc0:	71 f0       	breq	.+28     	; 0xbde <__vector_9+0x82>
 	{
-		TIM2_overflow_512us()
+		TIM2_overflow_512us();
      bc2:	e1 eb       	ldi	r30, 0xB1	; 177
      bc4:	f0 e0       	ldi	r31, 0x00	; 0
      bc6:	80 81       	ld	r24, Z
@@ -1759,7 +1761,7 @@ ISR(TIMER2_OVF_vect)
      bfc:	88 23       	and	r24, r24
      bfe:	69 f0       	breq	.+26     	; 0xc1a <__vector_9+0xbe>
 	{
-		TIM2_overflow_2ms()
+		TIM2_overflow_2ms();
      c00:	e1 eb       	ldi	r30, 0xB1	; 177
      c02:	f0 e0       	ldi	r31, 0x00	; 0
      c04:	80 81       	ld	r24, Z

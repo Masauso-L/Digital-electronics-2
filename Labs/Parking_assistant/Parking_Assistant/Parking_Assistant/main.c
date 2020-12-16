@@ -351,12 +351,12 @@ ISR(TIMER2_OVF_vect)
 {
 	if ((Distance_Front <= 15) | (Distance_Back<= 15))
 	{
-		TIM2_overflow_512us()
+		TIM2_overflow_512us();
 		GPIO_write_high(&PORTC, buzzer);
 	}
 	else if ((Distance_Front >= 15) | (Distance_Back >= 15))
 	{
-		TIM2_overflow_2ms()
+		TIM2_overflow_2ms();
 		GPIO_write_high(&PORTC, buzzer);
 	}
 }
