@@ -51,6 +51,8 @@ int main(void)
 	lcd_puts("cm");
 	
 	_delay_ms(50);
+	
+	// Ports and data register setup
 	GPIO_config_output(&DDRB, LED_GREEN);
 	GPIO_write_low(&PORTB, LED_GREEN);
 	
@@ -72,12 +74,12 @@ int main(void)
 	GPIO_config_input_pullup(&DDRD, echoPin1);
 	GPIO_config_input_pullup(&DDRD, echoPin2);
 	
-	
+	//setting up external interrupt
 	EIMSK |= ((1<<INT0) | (1<<INT1));
 	EICRA |= ((1<<ISC00) | (1<<ISC01) | (1<<ISC10) | (1<<ISC11));
 	
 	
-    // Configure 16-bit Timer/Counter1 to start ADC conversion
+    // Configure 16-bit Timer/Counter1  
     // Enable interrupt and set the overflow prescaler to 262 ms
 	TIM1_overflow_262ms();
 	TIM1_overflow_interrupt_enable();
